@@ -9,8 +9,12 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
+here = os.path.dirname(__file__)
 
-app = Flask(__name__)
+app = Flask(__name__, 
+template_folder=os.path.join(here, 'templates'),
+static_folder=os.path.join(here, 'static'))
+
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key")
 app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 
