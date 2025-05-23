@@ -1,0 +1,10 @@
+Flask
+Flask-Mail
+Flask-SQLAlchemy
+gunicorn
+Jinja2
+psycopg2-binary
+requests
+email-validator
+Werkzeug
+SQLAlchemy
