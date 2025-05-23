@@ -1,0 +1,337 @@
+/* Custom styles for Anish Kandi's portfolio website */
+
+/* General styles */
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    padding-top: 60px;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--bs-primary);
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(to right, var(--bs-dark), #2a2a2a);
+}
+
+/* Hero section */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--bs-primary);
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Card customization */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects section */
+.project-card {
+    height: 100%;
+}
+
+.project-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .card-text {
+    flex-grow: 1;
+}
+
+.technologies-badge {
+    display: inline-block;
+    background-color: var(--bs-gray-800);
+    color: var(--bs-light);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    border-radius: 4px;
+}
+
+/* Experience timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--bs-gray-500);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0.25rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+    border: 2px solid var(--bs-light);
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-date {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--bs-primary);
+}
+
+.timeline-position {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-company {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-location {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--bs-gray-600);
+}
+
+/* Skills section */
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.skill-category-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.skill-bar {
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--bs-gray-700);
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: var(--bs-primary);
+}
+
+/* Contact form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+    color: var(--bs-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+/* GitHub repositories */
+.repo-card {
+    height: 100%;
+}
+
+.repo-stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.repo-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+}
+
+/* API Demo section */
+.api-demo-card {
+    margin-bottom: 2rem;
+}
+
+.api-endpoint {
+    background-color: var(--bs-gray-800);
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-family: monospace;
+    margin-bottom: 1rem;
+}
+
+.api-method {
+    background-color: var(--bs-success);
+    color: var(--bs-light);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.api-path {
+    color: var(--bs-light);
+}
+
+.api-result {
+    background-color: var(--bs-gray-900);
+    color: var(--bs-light);
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: monospace;
+    overflow-x: auto;
+    max-height: 300px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bs-gray-900);
+    color: var(--bs-light);
+    padding: 2rem 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bs-gray-800);
+    color: var(--bs-light);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--bs-primary);
+    color: var(--bs-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 50vh;
+    }
+
+    .hero-name {
+        font-size: 1.75rem;
+    }
+
+    .hero-title {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+        left: -1.5rem;
+    }
+}
