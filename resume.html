@@ -1,0 +1,624 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="py-5 bg-gradient-dark text-light">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Resume</h1>
+        <p class="lead">My professional qualifications and background</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-9">
+                <h2 class="section-title mb-4">Anish Kandi</h2>
+                <h3 class="h5 text-primary mb-4">Integration & Data Engineer | Cloud & Automation</h3>
+                
+                <div class="mb-4">
+                    <h4 class="h6">Contact Details:</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:kandianishreddy@yahoo.co.in">kandianishreddy@yahoo.co.in</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+4915225810872">(+49) 15225810872</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-linkedin me-2"></i>
+                            <a href="https://linkedin.com/in/anishkandi" target="_blank">LinkedIn</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            Berlin, Germany
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 text-md-end">
+                <a href="/download-resume" class="btn btn-primary">
+                    <i class="fas fa-download me-2"></i>Download PDF
+                </a>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="h5 mb-3">Professional Summary</h3>
+                <p>
+                    Software Engineer with 7+ years of experience in the Software development, Integration and automation across
+                    various global domains in India, US, Europe, Middle East. Recently pursued MBA in Engineering Management and
+                    working on digital transformation at SKF Group. Strong background in DevOps, CI/CD, cloud platforms, and
+                    integration tools, with proven success in delivering cost-effective and scalable solutions.
+                </p>
+                <p>
+                    I have recently completed all coursework for my Master's degree and am currently in the final phase of my thesis, 
+                    which is expected to be completed by July. I am available to begin full-time work immediately as I have over 140 
+                    full working days available under my current visa conditions.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h3 class="h5 mb-3">Education</h3>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h4 class="h6">Master of Business Administration & Engineering</h4>
+                        <p class="mb-1">Interdisciplinary Management</p>
+                        <p class="mb-1">Hochschule für Technik und Wirtschaft Berlin</p>
+                        <p class="mb-0">
+                            <span class="text-muted">2023 - 2024</span> • 
+                            <span class="badge bg-primary">1.9 CGPA</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h6">Bachelor of Technology in Computer Science & Engineering</h4>
+                        <p class="mb-1">Jawaharlal Nehru Technology University</p>
+                        <p class="mb-0">
+                            <span class="text-muted">2007 - 2011</span> • 
+                            <span class="badge bg-primary">2.5 CGPA</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <h3 class="h5 mb-3">Language Skills</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                English
+                                <span class="badge bg-primary">C1</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                German
+                                <span class="badge bg-primary">B1</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Arabic
+                                <span class="badge bg-primary">Working proficiency</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Hindi/Telugu
+                                <span class="badge bg-primary">Native</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="h5 mb-3">Professional Experience</h3>
+                <div id="resume-experience">
+                    <!-- Will be loaded dynamically from the API -->
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="h5 mb-3">Technical Skills</h3>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <h4 class="h6">Programming Languages</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C/C++</li>
+                            <li>TypeScript</li>
+                            <li>Bash</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="h6">Operating Systems</h4>
+                        <ul>
+                            <li>Linux</li>
+                            <li>QNX RTOS</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="h6">Databases</h4>
+                        <ul>
+                            <li>MSSQL</li>
+                            <li>SQLite</li>
+                            <li>PostgreSQL</li>
+                            <li>AZURE SQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <h4 class="h6">Web Frameworks</h4>
+                        <ul>
+                            <li>Django</li>
+                            <li>Flask</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="h6">Cloud Platforms</h4>
+                        <ul>
+                            <li>AWS (EC2, Lambda)</li>
+                            <li>Azure (Azure DevOps, Blob Storage)</li>
+                            <li>GCP (Cloud Functions, Pub/Sub)</li>
+                            <li>Snowflake (Data cloud)</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="h6">Platforms</h4>
+                        <ul>
+                            <li>Salesforce (CRM)</li>
+                            <li>Litmus Edge – Edge computing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4 class="h6">Containers & Orchestration</h4>
+                        <ul>
+                            <li>Kubernetes (K8s)</li>
+                            <li>Docker (Alpine) & LitmusChaos</li>
+                            <li>Terraform</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="h6">CI/CD & DevOps Tools</h4>
+                        <ul>
+                            <li>Jenkins</li>
+                            <li>GitHub Actions</li>
+                            <li>Azure DevOps Pipelines</li>
+                            <li>Terraform</li>
+                            <li>Ansible</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="h6">Integration & API tech</h4>
+                        <ul>
+                            <li>REST APIs</li>
+                            <li>SOAP APIs</li>
+                            <li>JSON, XML, XSLT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h3 class="h5 mb-3">Project Management Skills</h3>
+                <ul>
+                    <li>Software Development Life Cycle (SDLC)</li>
+                    <li>Risk Management</li>
+                    <li>Change Management</li>
+                    <li>Project Planning</li>
+                    <li>Configuration & Release Management</li>
+                    <li>Requirements Management and Analysis</li>
+                    <li>Value Engineering</li>
+                    <li>{% extends "layout.html" %}
+
+{% block content %}
+<section class="py-5 bg-gradient-dark text-light">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Resume</h1>
+        <p class="lead">My professional experience, education and skills</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <h2 class="section-title mb-4">Anish Kandi</h2>
+                <h3 class="h5 text-primary mb-3">Integration & Data Engineer | Cloud & Automation</h3>
+                <p class="mb-4">
+                    Software Engineer with 7+ years of experience in the Software development, Integration and automation across
+                    various global domains in India, US, Europe, Middle East. Recently pursued MBA in Engineering Management and
+                    working on digital transformation at SKF Group. Strong background in DevOps, CI/CD, cloud platforms, and
+                    integration tools, with proven success in delivering cost-effective and scalable solutions.
+                </p>
+                <div class="mb-5">
+                    <div class="d-inline-block me-4 mb-3">
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:kandianishreddy@yahoo.co.in">kandianishreddy@yahoo.co.in</a>
+                    </div>
+                    <div class="d-inline-block me-4 mb-3">
+                        <i class="fas fa-phone me-2"></i>
+                        <a href="tel:+4915225810872">(+49)15225810872</a>
+                    </div>
+                    <div class="d-inline-block me-4 mb-3">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        Berlin
+                    </div>
+                    <div class="d-inline-block me-4 mb-3">
+                        <i class="fab fa-linkedin me-2"></i>
+                        <a href="https://linkedin.com/in/anishkandi" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="d-inline-block mb-3">
+                        <i class="fas fa-calendar-alt me-2"></i>
+                        1990/03/09
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-md-end mb-4">
+                <a href="/download-resume" class="btn btn-primary">
+                    <i class="fas fa-download me-2"></i>Download Resume PDF
+                </a>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Professional Experience -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="h5 mb-0">Professional Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Mar 2025 - Present</div>
+                                <h4 class="timeline-position h6 fw-bold">Werk student: Integration Engineer</h4>
+                                <div class="timeline-company">SKF Lubrication systems GmbH</div>
+                                <div class="timeline-location"><i class="fas fa-map-marker-alt me-2"></i>Berlin, Germany</div>
+                                <ul class="mt-2">
+                                    <li>Working on development and deployment of Python based integration scripts to automate data sync between snowflake and Salesforce (CRM) and other cloud systems using REST/SOAP APIs and JSON.</li>
+                                    <li>Working on ETL pipelines using Informatica PowerCenter for data flow, transformation and with API integrations.</li>
+                                    <li>Extracting the lead data by ML and transforming the data from GCP to Snowflake and pushing them to Salesforce (CRM) for sales team usage. Testing the aspects in Salesforce sandbox</li>
+                                    <li>Preparing the technical documentation of the tech-stack being developed and published in the Group share points</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jan 2025 - Mar 2025</div>
+                                <h4 class="timeline-position h6 fw-bold">Werk student: Software- Data Engineer</h4>
+                                <div class="timeline-company">GetYourGuide GmbH</div>
+                                <div class="timeline-location"><i class="fas fa-map-marker-alt me-2"></i>Berlin, Germany</div>
+                                <ul class="mt-2">
+                                    <li>Worked on development of reporting solution in Looker that replaced dozens of individual reports while unifying the visual language used in the company Looker Studio reports.</li>
+                                    <li>Worked on replacement of manual data collection process that cost the company 60K per annum by a scalable, automated solution leveraging AI.</li>
+                                    <li>Data collection process is executed by integrating the data to Morgan Stanley.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-date">Feb 2024 - Jan 2025</div>
+                                <h4 class="timeline-position h6 fw-bold">Werk student: Data/DevOps Enginner</h4>
+                                <div class="timeline-company">Fed Ex Express GmbH</div>
+                                <div class="timeline-location"><i class="fas fa-map-marker-alt me-2"></i>Berlin, Germany</div>
+                                <ul class="mt-2">
+                                    <li>Involved in tasks associated with integration/automation with APIs and CRUD operations (SQL): feeding data into FedEx's tracking system to ensure accurate and upto-date information.</li>
+                                    <li>Worked on development of AI chatbot project (LLM), implementing CI/CD pipelines using GitHub Actions and Azure DevOps, containerized applications with Docker, and deployed them on Azure Kubernetes Service (AKS) using Terraform for infrastructure as code.</li>
+                                    <li>Deployment with Prometheus, Grafana and Azure log Analytics with seamless authentication.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jan 2016 - Feb 2023</div>
+                                <h4 class="timeline-position h6 fw-bold">Software Engineer/Automation</h4>
+                                <div class="timeline-company">Alghanim International</div>
+                                <div class="timeline-location"><i class="fas fa-map-marker-alt me-2"></i>Kuwait</div>
+                                <ul class="mt-2">
+                                    <li>Successfully delivered 8 large-scale software projects across power, water, and wind sectors, leading cross-functional teams (3–6 members) and ensuring stakeholder requirements were fulfilled.</li>
+                                    <li>Developed and deployed real-time monitoring systems and a Python-based SCADA solution (using OPC UA, pymodbus) integrated with DCS platforms like ABB Advant/Melody, Siemens PCS7, and Emerson DeltaV, resulting in 15% reduced downtime and $100K annual cost savings.</li>
+                                    <li>Built a Flask-based REST API and Django based web app for wastewater treatment monitoring, executed SQL CRUD operations, and applied MongoDB for unstructured data management.</li>
+                                    <li>Integrated tools like PowerFactory and FGH Integral for power system analysis and fault automation, feeding insights into SCADA for optimized decision-making.</li>
+                                    <li>Engineered device communication protocols (Modbus TCP/IP), developed energy management algorithms on Siemens S7 and Allen-Bradley PLC 5, and created a dynamic Java-based corporate website for portfolio and investor communications.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-date">Feb 2014 - Jul 2015</div>
+                                <h4 class="timeline-position h6 fw-bold">Internship: Software Engineer</h4>
+                                <div class="timeline-company">Sai Wardha Power Pvt, Ltd</div>
+                                <div class="timeline-location"><i class="fas fa-map-marker-alt me-2"></i>Pune, India</div>
+                                <ul class="mt-2">
+                                    <li>Assistance in the development of the company website.</li>
+                                    <li>Involved in overhaul maintenance of controls, PLCs, and network communication.</li>
+                                    <li>Involved in the integration of operator workstation with local plant network communication.</li>
+                                    <li>Involved in activities such as Database creation, and all CRUD operations. Additionally involved in cleaning of data and scripting in SQL with JOIN/Sub queries etc based on the output necessary.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-date">Apr 2011 - Nov 2013</div>
+                                <h4 class="timeline-position h6 fw-bold">Co-founder - Startup</h4>
+                                <div class="timeline-company">320sms.com</div>
+                                <div class="timeline-location"><i class="fas fa-map-marker-alt me-2"></i>Hyderabad, India</div>
+                                <ul class="mt-2">
+                                    <li>Launched and scaled India's first 300-character SMS platform, serving B2B clients, managing backend development in PHP and SQL, and handling server backups.</li>
+                                    <li>Generating funds through the selling of SMS to commercial shops and schools.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Skills -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="h5 mb-0">Technical Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Programming Languages</h4>
+                                <ul>
+                                    <li>Python</li>
+                                    <li>Java</li>
+                                    <li>C/C++</li>
+                                    <li>TypeScript</li>
+                                    <li>Bash</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Operating Systems</h4>
+                                <ul>
+                                    <li>Linux</li>
+                                    <li>QNX RTOS</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Databases</h4>
+                                <ul>
+                                    <li>MSSQL</li>
+                                    <li>SQLite</li>
+                                    <li>PostgreSQL</li>
+                                    <li>AZURE SQL</li>
+                                    <li>MongoDB</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Web Frameworks</h4>
+                                <ul>
+                                    <li>Django</li>
+                                    <li>Flask</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Cloud Platforms</h4>
+                                <ul>
+                                    <li>AWS (EC2, Lambda)</li>
+                                    <li>Azure (Azure DevOps, Blob Storage)</li>
+                                    <li>GCP (Cloud Functions, Pub/Sub)</li>
+                                    <li>Snowflake (Data cloud)</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Platforms</h4>
+                                <ul>
+                                    <li>Salesforce (CRM)</li>
+                                    <li>Litmus Edge – Edge computing</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Containers & Orchestration</h4>
+                                <ul>
+                                    <li>Kubernetes(K8s)</li>
+                                    <li>Docker (Alpine) & LitmusChaos</li>
+                                    <li>Terraform</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">CI/CD & DevOps Tools</h4>
+                                <ul>
+                                    <li>Jenkins</li>
+                                    <li>GitHub Actions</li>
+                                    <li>Azure DevOps Pipelines</li>
+                                    <li>Terraform</li>
+                                    <li>Ansible</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Logging & Monitoring</h4>
+                                <ul>
+                                    <li>Grafana</li>
+                                    <li>Datadog</li>
+                                    <li>ELK stack</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Debugging Tools</h4>
+                                <ul>
+                                    <li>Kubectl</li>
+                                    <li>Cloud Logs</li>
+                                    <li>K9s</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Integration & API tech</h4>
+                                <ul>
+                                    <li>REST APIs</li>
+                                    <li>SOAP APIs</li>
+                                    <li>JSON</li>
+                                    <li>XML</li>
+                                    <li>XSLT</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Automation & ETL Tools</h4>
+                                <ul>
+                                    <li>Informatica</li>
+                                    <li>MuleSoft</li>
+                                    <li>Snowpipe (Snowflake)</li>
+                                    <li>Blob Storage (Azure)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Application Tools</h4>
+                                <ul>
+                                    <li>Power BI</li>
+                                    <li>Power Automate</li>
+                                    <li>PowerFactory</li>
+                                    <li>FGH Integral</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h4 class="h6 fw-bold">Linux tools</h4>
+                                <ul>
+                                    <li>Htop</li>
+                                    <li>netstat</li>
+                                    <li>tcpdump</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <!-- Education -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="h5 mb-0">Education</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h4 class="h6 fw-bold">Master of Business Administration & Engineering- Interdisciplinary Management</h4>
+                            <div>Hochschule für Technik und Wirtschaft Berlin</div>
+                            <div class="text-muted">2023 - 2024</div>
+                            <div>1,9 CGPA</div>
+                        </div>
+                        <div>
+                            <h4 class="h6 fw-bold">Bachelor of Technology in Computer Science & Engineering</h4>
+                            <div>Jawaharlal Nehru Technology University</div>
+                            <div class="text-muted">2007 - 2011</div>
+                            <div>2,5 CGPA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Language Skills -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="h5 mb-0">Language Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                English
+                                <span class="badge bg-primary">C1</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                German
+                                <span class="badge bg-primary">B1</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Arabic
+                                <span class="badge bg-primary">Working proficiency</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Hindi/Telugu
+                                <span class="badge bg-primary">Native</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Project Management Skills -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="h5 mb-0">Project Management Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Software Development Life Cycle (SDLC)</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Risk Management</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Change Management</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Project Planning</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Configuration & Release Management</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Requirements Analysis</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Value Engineering</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Coordination</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="h5 mb-0">Soft Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Problem-Solving and Communication Skills</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Interdisciplinary Collaboration</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Decision Making</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Analytical Thinking</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Current Status -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="h5 mb-0">Current Status</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info mb-0">
+                            <p class="mb-0">
+                                I have recently completed all coursework for my Master's degree and am currently in the final phase of my thesis, 
+                                which is expected to be completed by July. I am available to begin full-time work immediately as I have over 140 
+                                full working days available under my current visa conditions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Download Resume -->
+                <div class="text-center">
+                    <a href="/download-resume" class="btn btn-primary w-100">
+                        <i class="fas fa-download me-2"></i>Download Resume PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

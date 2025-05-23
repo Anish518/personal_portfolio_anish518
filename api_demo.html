@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="py-5 bg-gradient-dark text-light">
+    <div class="container">
+        <h1 class="display-4 fw-bold">API Demonstrations</h1>
+        <p class="lead">Explore the RESTful API endpoints powering this portfolio</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-8">
+                <h2 class="section-title mb-4">API Overview</h2>
+                <p>
+                    This section showcases the API endpoints available on this portfolio website. These APIs provide data about my skills, 
+                    experience, and projects, and demonstrate my backend development capabilities. Feel free to interact with them using 
+                    the buttons below.
+                </p>
+                <p>
+                    All endpoints return JSON data and follow RESTful principles. These APIs are implemented using Flask and 
+                    serve as practical examples of my integration and data engineering skills.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Skills API Demo -->
+        <div class="card mb-5 api-demo-card">
+            <div class="card-header">
+                <h3 class="card-title h5 mb-0">Skills API</h3>
+            </div>
+            <div class="card-body">
+                <p>This API returns a comprehensive list of my technical skills categorized by domain, along with proficiency levels.</p>
+                <div class="api-endpoint">
+                    <span class="api-method">GET</span>
+                    <span class="api-path">/api/data/skills</span>
+                </div>
+                <button id="skills-api-btn" class="btn btn-primary mb-3">
+                    <i class="fas fa-play me-2"></i>Try it
+                </button>
+                <div id="skills-api-result" class="api-result">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Experience API Demo -->
+        <div class="card mb-5 api-demo-card">
+            <div class="card-header">
+                <h3 class="card-title h5 mb-0">Experience API</h3>
+            </div>
+            <div class="card-body">
+                <p>This API returns details about my professional experience, including positions, companies, and responsibilities.</p>
+                <div class="api-endpoint">
+                    <span class="api-method">GET</span>
+                    <span class="api-path">/api/data/experience</span>
+                </div>
+                <button id="experience-api-btn" class="btn btn-primary mb-3">
+                    <i class="fas fa-play me-2"></i>Try it
+                </button>
+                <div id="experience-api-result" class="api-result">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Weather API Demo -->
+        <div class="card mb-5 api-demo-card">
+            <div class="card-header">
+                <h3 class="card-title h5 mb-0">Weather API Demo</h3>
+            </div>
+            <div class="card-body">
+                <p>This is a demonstration API that returns weather data for a specified city.</p>
+                <div class="api-endpoint">
+                    <span class="api-method">GET</span>
+                    <span class="api-path">/api/demo/weather?city={city_name}</span>
+                </div>
+                <form id="weather-api-form" class="mb-3">
+                    <div class="input-group">
+                        <input type="text" id="weather-city-input" class="form-control" placeholder="Enter city name" value="Berlin">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-play me-2"></i>Try it
+                        </button>
+                    </div>
+                </form>
+                <div id="weather-api-result" class="api-result">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- GitHub API Demo -->
+        <div class="card mb-5 api-demo-card">
+            <div class="card-header">
+                <h3 class="card-title h5 mb-0">GitHub Repositories API</h3>
+            </div>
+            <div class="card-body">
+                <p>This API fetches and returns my GitHub repositories data, demonstrating integration with external APIs.</p>
+                <div class="api-endpoint">
+                    <span class="api-method">GET</span>
+                    <span class="api-path">/api/github/repos</span>
+                </div>
+                <p>
+                    This endpoint fetches data from the GitHub API and returns it in a structured format. 
+                    To see this in action, visit the <a href="/github">GitHub page</a> of this portfolio.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark text-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h2 class="section-title text-light mb-4">API Development Expertise</h2>
+                <p>
+                    Throughout my career, I've developed and integrated various types of APIs, including:
+                </p>
+                <ul>
+                    <li>RESTful API design and implementation</li>
+                    <li>SOAP API integration for enterprise systems</li>
+                    <li>API Gateway implementation for security and rate limiting</li>
+                    <li>OAuth and token-based authentication</li>
+                    <li>API documentation with OpenAPI/Swagger</li>
+                    <li>Integration with third-party services and platforms</li>
+                    <li>Error handling and validation best practices</li>
+                    <li>Performance optimization for high-traffic APIs</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <div class="card bg-dark-subtle">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">API Integration Projects</h3>
+                        <div class="list-group list-group-flush bg-transparent">
+                            <div class="list-group-item bg-transparent">
+                                <h4 class="h6">Salesforce Integration</h4>
+                                <p class="mb-0 small">Automated data sync between Snowflake and Salesforce CRM using REST/SOAP APIs</p>
+                            </div>
+                            <div class="list-group-item bg-transparent">
+                                <h4 class="h6">Real-time Monitoring System</h4>
+                                <p class="mb-0 small">Python-based SCADA solution using OPC UA and industrial communication protocols</p>
+                            </div>
+                            <div class="list-group-item bg-transparent">
+                                <h4 class="h6">ML Data Pipeline</h4>
+                                <p class="mb-0 small">Extracting and transforming data from GCP to Snowflake and pushing to Salesforce</p>
+                            </div>
+                            <div class="list-group-item bg-transparent">
+                                <h4 class="h6">Wastewater Treatment Monitoring</h4>
+                                <p class="mb-0 small">Flask-based REST API for environmental data collection and analysis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/api_demo.js') }}"></script>
+{% endblock %}

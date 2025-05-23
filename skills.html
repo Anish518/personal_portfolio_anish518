@@ -1,0 +1,233 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="py-5 bg-gradient-dark text-light">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Technical Skills</h1>
+        <p class="lead">A comprehensive overview of my technical abilities and proficiency levels</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-8">
+                <h2 class="section-title mb-4">Skills Overview</h2>
+                <p class="lead">
+                    With over 7 years of experience in software development, integration, and automation, 
+                    I've cultivated a diverse skill set spanning multiple technologies, platforms, and domains.
+                </p>
+                <p>
+                    My expertise encompasses programming languages, cloud platforms, databases, containerization, 
+                    CI/CD tools, and integration technologies. The visualizations below represent my proficiency 
+                    in various technical areas based on my industry experience and project work.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row g-4" id="skills-charts-container">
+            <!-- Programming Languages Chart -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Programming Languages</h3>
+                        <canvas id="programmingLanguagesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Databases Chart -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Databases</h3>
+                        <canvas id="databasesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cloud Platforms Chart -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Cloud Platforms</h3>
+                        <canvas id="cloudPlatformsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DevOps Tools Chart -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">DevOps Tools</h3>
+                        <canvas id="devOpsToolsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web Frameworks Chart -->
+            <div class="col-md-6 mx-auto">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Web Frameworks</h3>
+                        <canvas id="webFrameworksChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark text-light">
+    <div class="container">
+        <h2 class="section-title text-light mb-4">Additional Skills</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark-subtle h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Operating Systems</h3>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent">Linux</li>
+                            <li class="list-group-item bg-transparent">QNX RTOS</li>
+                            <li class="list-group-item bg-transparent">Windows Server</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark-subtle h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Integration & API Tech</h3>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent">REST APIs</li>
+                            <li class="list-group-item bg-transparent">SOAP APIs</li>
+                            <li class="list-group-item bg-transparent">JSON, XML, XSLT</li>
+                            <li class="list-group-item bg-transparent">API Gateway</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark-subtle h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Platforms</h3>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent">Salesforce (CRM)</li>
+                            <li class="list-group-item bg-transparent">Litmus Edge – Edge computing</li>
+                            <li class="list-group-item bg-transparent">Power BI</li>
+                            <li class="list-group-item bg-transparent">Power Automate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark-subtle h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Automation & ETL Tools</h3>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent">Informatica</li>
+                            <li class="list-group-item bg-transparent">MuleSoft</li>
+                            <li class="list-group-item bg-transparent">Snowpipe (Snowflake)</li>
+                            <li class="list-group-item bg-transparent">Blob Storage (Azure)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark-subtle h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Logging & Monitoring</h3>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent">Grafana</li>
+                            <li class="list-group-item bg-transparent">Datadog</li>
+                            <li class="list-group-item bg-transparent">ELK stack</li>
+                            <li class="list-group-item bg-transparent">Prometheus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark-subtle h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Debugging Tools</h3>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent">Kubectl, K9s</li>
+                            <li class="list-group-item bg-transparent">Cloud Logs</li>
+                            <li class="list-group-item bg-transparent">Linux tools (htop, netstat, tcpdump)</li>
+                            <li class="list-group-item bg-transparent">Postman, Insomnia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h2 class="section-title mb-4">Continuous Learning</h2>
+                <p>
+                    I am passionate about continuous learning and keeping up with the latest technologies.
+                    Some of my recent learning focus areas include:
+                </p>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item">
+                        <i class="fas fa-book-reader text-primary me-2"></i>
+                        Advanced Kubernetes Patterns and Best Practices
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-book-reader text-primary me-2"></i>
+                        Machine Learning and AI Implementation in ETL Pipelines
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-book-reader text-primary me-2"></i>
+                        Serverless Architecture on Multiple Cloud Platforms
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-book-reader text-primary me-2"></i>
+                        Advanced Data Integration Patterns
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Certifications & Training</h3>
+                        <div class="timeline certification-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2024</div>
+                                <div class="fw-bold">Master of Business Administration & Engineering</div>
+                                <div>Hochschule für Technik und Wirtschaft Berlin</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2023</div>
+                                <div class="fw-bold">Azure DevOps Professional</div>
+                                <div>Microsoft</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2022</div>
+                                <div class="fw-bold">Certified Kubernetes Administrator (CKA)</div>
+                                <div>Cloud Native Computing Foundation</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2020</div>
+                                <div class="fw-bold">AWS Certified Solutions Architect</div>
+                                <div>Amazon Web Services</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+{% endblock %}

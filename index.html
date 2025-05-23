@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-gradient-dark text-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 hero-content">
+                <h1 class="hero-name animate-on-scroll">Anish Kandi</h1>
+                <h2 class="hero-title animate-on-scroll">Integration & Data Engineer | Cloud & Automation</h2>
+                <p class="hero-description animate-on-scroll">
+                    Software Engineer with 7+ years of experience in Software development, Integration, and automation across
+                    various global domains in India, US, Europe, and the Middle East. Recently pursued MBA in Engineering Management and
+                    working on digital transformation at SKF Group. Strong background in DevOps, CI/CD, cloud platforms, and
+                    integration tools, with proven success in delivering cost-effective and scalable solutions.
+                </p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="/contact" class="btn btn-primary me-3">Contact Me</a>
+                    <a href="/download-resume" class="btn btn-outline-light">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Overview Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title mb-4">Skills Overview</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5"><i class="fas fa-code me-2"></i>Programming</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">Python, Java, C/C++</li>
+                            <li class="mb-2">TypeScript and Bash</li>
+                            <li class="mb-2">Web development</li>
+                        </ul>
+                        <a href="/skills" class="btn btn-sm btn-outline-primary mt-2">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5"><i class="fas fa-cloud me-2"></i>Cloud & DevOps</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">AWS, Azure, GCP, Snowflake</li>
+                            <li class="mb-2">Kubernetes, Docker</li>
+                            <li class="mb-2">CI/CD, Terraform, Ansible</li>
+                        </ul>
+                        <a href="/skills" class="btn btn-sm btn-outline-primary mt-2">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5"><i class="fas fa-database me-2"></i>Data & Integration</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">MSSQL, PostgreSQL, MongoDB</li>
+                            <li class="mb-2">REST/SOAP APIs, ETL</li>
+                            <li class="mb-2">Informatica, MuleSoft</li>
+                        </ul>
+                        <a href="/skills" class="btn btn-sm btn-outline-primary mt-2">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="py-5 bg-dark">
+    <div class="container">
+        <h2 class="section-title text-light mb-4">Featured Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Snowflake to Salesforce Integration</h3>
+                        <p class="card-text">
+                            Automated data synchronization between Snowflake and Salesforce CRM using Python-based 
+                            integration scripts with REST/SOAP APIs and JSON.
+                        </p>
+                        <div class="mb-3">
+                            <span class="technologies-badge">Python</span>
+                            <span class="technologies-badge">REST API</span>
+                            <span class="technologies-badge">Snowflake</span>
+                            <span class="technologies-badge">Salesforce</span>
+                        </div>
+                        <a href="/projects" class="btn btn-sm btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h3 class="card-title h5">AI Chatbot with CI/CD Pipeline</h3>
+                        <p class="card-text">
+                            Developed an AI chatbot (LLM) with CI/CD pipelines using GitHub Actions and Azure DevOps, 
+                            containerized with Docker and deployed on AKS.
+                        </p>
+                        <div class="mb-3">
+                            <span class="technologies-badge">Python</span>
+                            <span class="technologies-badge">LLM</span>
+                            <span class="technologies-badge">GitHub Actions</span>
+                            <span class="technologies-badge">Docker</span>
+                            <span class="technologies-badge">Kubernetes</span>
+                        </div>
+                        <a href="/projects" class="btn btn-sm btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="/projects" class="btn btn-outline-light">View All Projects</a>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Highlight Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title mb-4">Experience Highlights</h2>
+        <div class="timeline">
+            <!-- Current Job -->
+            <div class="timeline-item">
+                <div class="timeline-date">Mar 2025 - Present</div>
+                <h3 class="timeline-position">Integration Engineer</h3>
+                <div class="timeline-company">SKF Lubrication systems GmbH</div>
+                <div class="timeline-location"><i class="fas fa-map-marker-alt me-2"></i>Berlin, Germany</div>
+                <p>
+                    Working on development and deployment of Python based integration scripts to automate data 
+                    sync between snowflake and Salesforce CRM and other cloud systems using REST/SOAP APIs and JSON.
+                </p>
+            </div>
+            <!-- Previous Job -->
+            <div class="timeline-item">
+                <div class="timeline-date">Feb 2024 - Jan 2025</div>
+                <h3 class="timeline-position">Data/DevOps Engineer</h3>
+                <div class="timeline-company">Fed Ex Express GmbH</div>
+                <div class="timeline-location"><i class="fas fa-map-marker-alt me-2"></i>Berlin, Germany</div>
+                <p>
+                    Worked on development of AI chatbot project (LLM), implementing CI/CD pipelines using GitHub Actions 
+                    and Azure DevOps, containerized applications with Docker, and deployed them on Azure Kubernetes Service.
+                </p>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="/experience" class="btn btn-outline-primary">View Full Experience</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA Section -->
+<section class="py-5 bg-primary text-light">
+    <div class="container text-center">
+        <h2 class="mb-4">Interested in working together?</h2>
+        <p class="lead mb-4">
+            I'm currently available for full-time roles and freelance projects
+        </p>
+        <a href="/contact" class="btn btn-light">Get in Touch</a>
+    </div>
+</section>
+{% endblock %}
