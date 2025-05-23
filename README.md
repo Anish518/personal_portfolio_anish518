@@ -48,7 +48,6 @@ python main.py
 gunicorn --bind 0.0.0.0:5000 main:app
 Access the website at http://localhost:5000
 
-Project Structure
 portfolio-website/
 ├── app.py                  # Flask application setup and routes
 ├── main.py                 # Application entry point
