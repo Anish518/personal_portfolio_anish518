@@ -217,7 +217,17 @@ def github_repos():
     except Exception as e:
         logging.error(f"Error fetching GitHub repos: {str(e)}")
         return jsonify({"error": str(e)}), 500
-
+        
+@app.route('/_debug_templates')
+def _debug_templates():
+    here = os.path.dirname(__file__)
+    tf = os.path.join(here, 'templates')
+    try:
+        files = os.listdir(tf)
+    except Exception as e:
+        return jsonify(error=str(e), expected_templates_folder=tf)
+    return jsonify(templates=files, expected_templates_folder=tf)
+    
 @app.route('/api_demo')
 def api_demo():
     return render_template('api_demo.html', page_title="API Demo")
